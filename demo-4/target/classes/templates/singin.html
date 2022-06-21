@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Đăng Ký</h1>
+    <form method="post" th:action="@{/user/add}" th:object="${user}">
+        <input name="username" th:value="${user.username}" type="text" class="form-login-username" placeholder="Nhập username" required>
+        <input name="password" type="password" class="form-login-password" placeholder="Nhập password" required>
+        <p> <button type="submit">Đăng ký</button></p>
+    </form>
+    <a href="/login">Đăng nhập</a>
+</body>
+</html>

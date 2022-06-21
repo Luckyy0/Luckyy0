@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title> LTW</title>
+</header>
+
+<body>
+		<table border="1">
+			<tr>
+				<th>ma</th>
+				<th>noi dung</th>
+				<th>gia</th>
+			</tr>
+			<div th:each="pr: ${pro}">
+				<tr>
+					<td th:text = "${pr.id}"></td>
+					<td th:text ="${pr.content}"></td>
+					<td th:text ="${pr.price}"></td>
+					<td> <a th:href = "@{|/product/edit/${pr.id}|}"> Edit</a></td>
+					<td> <a href = "@{|/product/delete/${pr.id}|}"> Delete</a></td>
+				</tr>
+			</div>
+		</table>
+</body>
+
+</html>
